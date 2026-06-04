@@ -1,0 +1,104 @@
+body {
+  margin: 0;
+  background: #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+h1 {
+    position: absolute;
+  top: 20%;
+  margin: 0;
+  font-size: 24px;
+  text-align: center;
+}
+.phone {
+  width: 390px;
+  height: 844px;
+  padding: 20px;
+  background: white;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  position: relative;
+}
+
+/* start.html */
+#startBtn {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 10px;
+}
+
+/* test.html */
+.header {
+    position: relative;
+    top: 0px;
+    left: 0;
+    box-sizing: border-box;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+    height: 90px;
+    color: rgb(24, 24, 24);
+}
+
+.header p {
+    margin: 0;
+    font-size: 18px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    box-sizing: border-box;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    width: 100%;
+    height: 90px;
+    color: rgb(24, 24, 24);
+}
+
+.bar {
+  margin: 0;
+  width: 100%;
+  height: 8px;
+  border: 1px solid #333;
+  border-radius: 10px;
+  background: white;
+}
+
+.options {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  align-items: center;
+}
+
+#opt1, #opt2, #opt3, #opt4 {
+  width: 80%;
+  padding: 15px;
+  margin: 10px 0;
+  font-size: 18px;
+  border-radius: 10px;
+}

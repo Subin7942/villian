@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="phone">
+        <div class="header">
+            <p id="qNum"></p>
+            <div class="bar"></div>
+        </div>
+
+        <!-- 질문 -->
+        <h1 id="question"></h1>
+    
+        <div class="options">
+            <button id="opt1"></button>
+            <button id="opt2"></button>
+            <button id="opt3"></button>
+            <button id="opt4"></button>
+        </div>
+
+        <div class="footer">
+            <button id="backBtn">이전</button>
+            <button id="nextBtn">다음</button>
+        </div>
+    </div>
+
+<script>
+    let score = {
+  freeRide: 0,      // 무임승차형
+  schedule: 0,      // 일정파괴형
+  diver: 0,         // 잠수형
+  evade: 0,         // 책임회피형
+  liar: 0,          // 거짓말형
+  dictator: 0,      // 독단형
+  aggressive: 0     // 공격적소통형
+};
+
+
+const questions = [
+{
+  question: "역할 분담 이후 그 팀원은?",
+  options: [
+    {
+      text: "다른 역할이 해온 결과물에 대해 뭐라 한다",
+      type: "aggressive"
+    },
+    {
+      text: "자신의 역할을 최소한으로 하거나 아예 안 한다",
+      type: "evade"
+    },
+    {
+      text: "자기 방식만 고집한다",
+      type: "dictator"
+    },
+    {
+      text: "자기는 이 역할 한 적 없다며 안 해 온다",
+      type: "liar"
+    }
+  ]
+},
+{
+  question: "단톡방에서 가장 자주 보이는 모습은?",
+  options: [
+    {
+      text: "읽기만 하고 아무 반응이 없다",
+      type: "diver"
+    },
+    {
+      text: "말투가 날카롭고 공격적이다",
+      type: "aggressive"
+    },
+    {
+      text: "애초에 톡방에 잘 안 들어온다",
+      type: "schedule"
+    },
+    {
+      text: "필요한 말만 짧게 하고 사라진다",
+      type: "freeRide"
+    }
+  ]
+},
+{
+  question: "중간 점검 때는?",
+  options: [
+    {
+      text: "시간을 못 지켜 점검 시간을 늦춘다",
+      type: "schedule"
+    },
+    {
+      text: "하겠다고 해놓고 제대로 안 해왔다",
+      type: "liar"
+    },
+    {
+      text: "남의 결과물을 자기 마음대로 하려한다",
+      type: "dictator"
+    },
+    {
+      text: "의외로 결과물이 좋지않다",
+      type: "freeRide"
+    }
+  ]
+},
+{
+  question: "마감이 다가오면?",
+  options: [
+    {
+      text: "바빠서 못했다면서 sns엔 놀러간 사진이 있다",
+      type: "liar"
+    },
+    {
+      text: "시간은 없는데 결과물이 별로다",
+      type: "freeRide"
+    },
+    {
+      text: "어느 순간부터 연락이 없다",
+      type: "diver"
+    },
+    {
+      text: "애초에 자기 할일이 아니라며 더 안하려 한다",
+      type: "dictator"
+    }
+  ]
+},
+{
+  question: "회의 중에는?",
+  options: [
+    {
+      text: "자꾸 남의 의견을 부정적으로 본다",
+      type: "aggressive"
+    },
+    {
+      text: "참여하는 하지만 의견이 없다",
+      type: "freeRide"
+    },
+    {
+      text: "회의에 자꾸 늦는다",
+      type: "schedule"
+    },
+    {
+      text: "자기 의견만 고집한다.",
+      type: "dictator"
+    }
+  ]
+},
+{
+  question: "가장 답답했던 순간은?",
+  options: [
+    {
+      text: "진행해야 하는데 연락이 안 될 때",
+      type: "diver"
+    },
+    {
+      text: "계획해놓은 일정을 계속 바꿀 때",
+      type: "schedule"
+    },
+    {
+      text: "실수해놓고 제대로 수습 안할 때",
+      type: "evade"
+    },
+    {
+      text: "솔직하게 말을 안해서 상황 악화 시킬 때",
+      type: "liar"
+    }
+  ]
+},
+{
+  question: "문제가 발생했을 때는?",
+  options: [
+    {
+      text: "적극적으로 해결하려 하지 않는다",
+      type: "evade"
+    },
+    {
+      text: "특정 방법으로만 해결하려고 한다",
+      type: "dictator"
+    },
+    {
+      text: "갑자기 연락이 잘 안 된다",
+      type: "diver"
+    },
+    {
+      text: "말을 거칠게 한다",
+      type: "aggressive"
+    }
+  ]
+},
+];
+
+let currentQuestion = 0;
+let qNum = 1;
+
+// 질문과 선택지 업데이트
+function loadQuestion() {
+    document.getElementById("question").innerHTML =
+        questions[currentQuestion].question;
+
+const buttons = [
+    document.getElementById("opt1"),
+    document.getElementById("opt2"),
+    document.getElementById("opt3"),
+    document.getElementById("opt4")
+];
+
+buttons.forEach((button, index) => {
+    button.textContent =
+            questions[currentQuestion].options[index].text;
+
+
+    button.addEventListener("click", function() {
+        const selectedType =
+            questions[currentQuestion].options[index].type;
+        score[selectedType]++;
+        console.log(score);
+
+    });
+
+});
+
+    document.getElementById("qNum").innerHTML = `Question ${currentQuestion+1}`;
+}
+
+loadQuestion();
+
+// 이전 버튼, 다음 버튼 누를 때
+document.getElementById("nextBtn").addEventListener("click", function() {
+
+    if (currentQuestion < questions.length - 1) {
+        currentQuestion++;
+        loadQuestion();
+    } else {
+        window.location.href = "./result.html";
+    }
+
+});
+document.getElementById("backBtn").addEventListener("click", function() {
+    if (currentQuestion > 0) {
+        currentQuestion--;
+        qNum--;
+        loadQuestion();
+    }
+});
+</script>
+
+<!-- 이전 페이지로 이동 -->
+<button id="back">뒤로가기</button>
+<script>
+document.getElementById("back").addEventListener("click", function() {
+    window.location.href = "./start.html";
+});
+</script>
+</body>
+</html>
