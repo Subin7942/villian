@@ -1,11 +1,66 @@
-<!DOCTYPE html>
+<!doctype html>
+
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <p>결과 페이지</p>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="style2.css" />
+
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <div class="phone screen-result">
+      <div class="phone-title">당신이 겪은 빌런은?</div>
+
+      <div class="card-container">
+        <input
+          type="checkbox"
+          id="card-flip-checkbox"
+          class="hidden-checkbox"
+        />
+
+        <label for="card-flip-checkbox" class="card">
+          <div class="card-face card-front">
+            <img src="./asset/freeRide.png" alt="빌런 카드 앞면" />
+          </div>
+
+          <div class="card-face card-back">
+            <h3>무임승차형</h3>
+
+            <p>• 회의에는 참여하지만 실질적 작업량은 적음</p>
+
+            <p>• 분위기는 잘 맞추지만 책임은 흐릿함</p>
+
+            <p>• 본인 일이 늦어지면 다른 사람이 도와주길 기대함</p>
+          </div>
+        </label>
+      </div>
+
+      <button type="button" class="button_return">다시하기</button>
+
+      <button type="button" class="button_upload">공유하기</button>
+
+      <button type="button" class="button_next">다음 화면</button>
+    </div>
+
+    <div class="phone screen-swipe hidden">
+      <div class="phone-title">다음 화면</div>
+        </div>
+      </div>
+
+      <!-- <button type="button" class="button_back">뒤로가기</button> -->
+    </div>
+  </body>
+
+<script>
+  document
+  .getElementById('button_return')
+  .addEventListener('click', function () {
+    window.location.href = './start.html';
+  });
+  </script>
+
 </html>

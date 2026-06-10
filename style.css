@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  padding: 0;
   background: #ddd;
   display: flex;
   justify-content: center;
@@ -8,15 +9,16 @@ body {
 }
 
 h1 {
-    position: absolute;
+  position: absolute;
   top: 20%;
   margin: 0;
   font-size: 24px;
   text-align: center;
 }
 .phone {
+  box-sizing: border-box;
   width: 390px;
-  height: 844px;
+  height: 100vh;
   padding: 20px;
   background: white;
   overflow: hidden;
@@ -30,47 +32,47 @@ h1 {
 
 /* start.html */
 #startBtn {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 15px 30px;
-    font-size: 18px;
-    border-radius: 10px;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 15px 30px;
+  font-size: 18px;
+  border-radius: 10px;
 }
 
 /* test.html */
 .header {
-    position: relative;
-    top: 0px;
-    left: 0;
-    box-sizing: border-box;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    width: 100%;
-    height: 90px;
-    color: rgb(24, 24, 24);
+  position: relative;
+  top: 0px;
+  left: 0;
+  box-sizing: border-box;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 100%;
+  height: 90px;
+  color: rgb(24, 24, 24);
 }
 
 .header p {
-    margin: 0;
-    font-size: 18px;
+  margin: 0;
+  font-size: 18px;
 }
 
 .footer {
-    position: absolute;
-    bottom: 20px;
-    left: 0;
-    box-sizing: border-box;
-    padding: 20px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    width: 100%;
-    height: 90px;
-    color: rgb(24, 24, 24);
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  box-sizing: border-box;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  width: 100%;
+  height: 90px;
+  color: rgb(24, 24, 24);
 }
 
 .bar {
@@ -95,10 +97,14 @@ h1 {
   align-items: center;
 }
 
-#opt1, #opt2, #opt3, #opt4 {
+#opt1,
+#opt2,
+#opt3,
+#opt4 {
   width: 80%;
   padding: 15px;
   margin: 10px 0;
   font-size: 18px;
   border-radius: 10px;
 }
+
