@@ -1,0 +1,101 @@
+/* 테스트 화면 진행 바 */
+.progress {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  width: 100%;
+  height: 90px;
+}
+
+/* 진행 바의 각 칸 설정 */
+.step {
+  flex: 1;
+  height: 3px;
+  border-radius: 999px;
+  background: #ddd;
+
+  display: flex;
+  justify-content: center;
+}
+
+.step.active {
+  background: #333;
+}
+
+/* 질문 번호 */
+.qNum {
+  margin: 0;
+  position: relative;
+  top: -20px;
+  font-size: 12px;
+}
+
+/* 선택지 목록 */
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  align-items: center;
+}
+
+/* 각 선택지 버튼 별 설정 */
+#opt1,
+#opt2,
+#opt3,
+#opt4 {
+  width: 100%;
+  padding: 20px 15px;
+  border-radius: 10px;
+
+  font-size: 17px;
+  letter-spacing: -3%;
+  line-height: 25px;
+
+  color: black;
+  background: #ddd;
+}
+#opt1.active,
+#opt2.active,
+#opt3.active,
+#opt4.active {
+  width: 100%;
+  padding: 20px 15px;
+  border-radius: 10px;
+
+  font-size: 17px;
+  letter-spacing: -3%;
+  line-height: 25px;
+
+  color: rgb(255, 255, 255);
+  background: #333;
+}
+
+/* 테스트 화면 하단 버튼 */
+.buttonsTestPg {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 50px;
+}
+
+.buttonsTestPg button {
+  width: 70px;
+  height: 50px;
+  border-radius: 10px;
+}
+
+/* 뒤로 가기 버튼 */
+#backBtn {
+}
+#backBtn:active {
+  background: #333;
+}
+
+/* 다음 버튼 */
+#nextBtn {
+}
+#nextBtn:active {
+  background: #333;
+}

@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../result.css" />
+    <script src="../result.js" defer></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="phone">
+      <div class="resultPg">
+        <!-- 이미지 -->
+        <img class="resultImg" src="../asset/freeRide.png" alt="" />
+
+        <!-- 유형이름 -->
+        <p id="typeName">무임승차형</p>
+
+        <!-- 유형 한 줄 요약 -->
+        <p id="sentence">실질적인 기여 없지만 성과는 함께</p>
+
+        <!-- 유형 설명 -->
+        <p id="contents">
+          회의에는 참여하지만 실제 결과물에 대한 기여도는 상대적으로 낮은
+          유형입니다. 맡은 업무의 진행이 더디거나 역할 수행이 충분히 이루어지지
+          않아, 부족한 부분을 다른 팀원이 보완하는 경우가 많습니다.
+        </p>
+
+        <!-- 원인 설명 -->
+        <p class="subheading">행동의 원인</p>
+        <div id="resultContainer">
+          <p>부담이 적은 역할만 맡고 핵심 업무를 피하려는 유형입니다.</p>
+          <p>부담이 적은 역할만 맡고 핵심 업무를 피하려는 유형입니다.</p>
+          <p>부담이 적은 역할만 맡고 핵심 업무를 피하려는 유형입니다.</p>
+          <p>부담이 적은 역할만 맡고 핵심 업무를 피하려는 유형입니다.</p>
+        </div>
+
+        <!-- 매뉴얼 -->
+        <p class="subheading">상황별 대처 매뉴얼</p>
+        <div class="buttonsManual">
+          <button id="manual1">마감 직전에 대충 해온 일을 떠넘길 때</button>
+          <button id="manual2">
+            아무거나 괜찮다면서 결정과 책임을 피할 때
+          </button>
+          <button id="manual3">항상 부담적은 역할만 할 때</button>
+        </div>
+      </div>
+
+      <!-- 하단 버튼들 -->
+      <div class="buttonsResultPg">
+        <button id="shareBtn"></button>
+        <button id="restartBtn">다시하기</button>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    function loadResult() {
+      //   버튼 내용
+      const manuals = [
+        document.getElementById('manual1'),
+        document.getElementById('manual2'),
+        document.getElementById('manual3'),
+      ];
+      document.getElementById('manual1').addEventListener('click', function () {
+        window.location.href = '../manualPage/freeRideManual_1.html';
+      });
+      document.getElementById('manual2').addEventListener('click', function () {
+        window.location.href = '../manualPage/freeRideManual_2.html';
+      });
+      document.getElementById('manual3').addEventListener('click', function () {
+        window.location.href = '../manualPage/freeRideManual_3.html';
+      });
+    }
+
+    loadResult();
+  </script>
+</html>

@@ -1,0 +1,57 @@
+.resultPg {
+  width: 100%;
+  height: 80%;
+  align-self: flex-start;
+}
+
+.resultImg {
+  width: 100%;
+  aspect-ratio: 342 / 456;
+  border-radius: 10px;
+}
+
+.buttonsResultPg {
+  position: fixed;
+
+  width: 400px;
+  height: 50px;
+
+  padding: 40px;
+  top: calc(50% + 390px);
+
+  transform: translateX(-50%, -50%);
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  background: linear-gradient(to top, white 70%, rgba(255, 255, 255, 0));
+  z-index: 1000;
+}
+
+.buttonsResultPg button {
+  height: 50px;
+  border-radius: 10px;
+}
+
+#shareBtn {
+  aspect-ratio: 60 / 50;
+}
+
+#restartBtn {
+  aspect-ratio: 250 / 50;
+}
+
+.buttonsManual {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+#manual1,
+#manual2,
+#manual3 {
+  width: 100%;
+  height: 56px;
+  border-radius: 10px;
+}
