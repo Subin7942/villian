@@ -2,14 +2,14 @@ let score = {};
 
 const questions = [
   {
-    question: '서로의 결과물을 피드백 할 때 빌런은 어떻게 행동하나요?',
+    question: `서로의 결과물을 피드백 할 때<br>빌런은 어떻게 행동하나요?`,
     options: [
       {
         text: '다른 팀원이 해온 결과물을 비난한다',
         type: 'aggressive',
       },
       {
-        text: '해온 것이 없는 상태로 다음에 한다고 말한다',
+        text: '한 것이 없는 상태로 다음에 한다고 말한다',
         type: 'evade',
       },
       {
@@ -17,13 +17,13 @@ const questions = [
         type: 'dictator',
       },
       {
-        text: '나는 이거 해오는지 몰랐다며 시치미를 뗀다',
+        text: '이거 해오는지 몰랐다며 시치미를 뗀다',
         type: 'liar',
       },
     ],
   },
   {
-    question: '팀플하면서 빌런이 자주 보였던 행동은 어떤가요? ',
+    question: `팀플하면서 빌런이 자주 보였던<br>행동은 어떤가요?`,
     options: [
       {
         text: '매번 시간을 미루거나 늦는다',
@@ -44,7 +44,7 @@ const questions = [
     ],
   },
   {
-    question: '빌런의 행동 중 당신을 가장 화나게 하는 것은 무엇인가요?',
+    question: `빌런의 행동 중 당신을 가장<br>화나게 하는 것은 무엇인가요?`,
     options: [
       {
         text: '의논할 일이 많은데 연락을 안 받는다',
@@ -65,7 +65,7 @@ const questions = [
     ],
   },
   {
-    question: '팀 회의에서 의사결정을 할 때 빌런은 어떻게 행동하나요?',
+    question: `팀 회의에서 의사결정을 할 때<br>빌런은 어떻게 행동하나요?`,
     options: [
       {
         text: '의견 조율보다 날 선 반응으로 소통을 방해한다',
@@ -86,7 +86,7 @@ const questions = [
     ],
   },
   {
-    question: '팀플 일정을 정할 때 단톡방 속 그 팀원의 반응은 어떤가요?',
+    question: `팀플 일정을 정할 때 단톡방 속<br>빌런의 반응은 어떤가요?`,
     options: [
       {
         text: '아예 안보거나 보고도 무응답한다',
@@ -107,7 +107,7 @@ const questions = [
     ],
   },
   {
-    question: '팀플 마감일이 다가올수록 빌런은 주로 어떤 행동을 보이나요?',
+    question: `마감일이 다가올수록 빌런은<br>주로 어떤 행동을 보이나요?`,
     options: [
       {
         text: '마감이 다가올수록 과제를 해오기보다 못한 이유를 부풀려서 말한다',
@@ -128,7 +128,7 @@ const questions = [
     ],
   },
   {
-    question: '팀플 위기 상황에서 빌런은 어떤 태도를 보이나요?',
+    question: `팀플 위기 상황에서<br>빌런은 어떤 태도를 보이나요?`,
     options: [
       {
         text: '우물쭈물대며 다른 사람이 이끌어가길 기대한다',

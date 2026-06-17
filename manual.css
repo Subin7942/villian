@@ -6,10 +6,8 @@
 .manualPg,
 .action,
 .example {
-  margin: 0;
-}
-
-.manualPg {
+  margin-top: 0;
+  padding-top: 0;
 }
 
 /* .up {
@@ -157,4 +155,14 @@
 }
 #backBtn:active {
   /* background: #333; */
+}
+
+.space {
+  height: 20px;
+}
+.space2 {
+  height: 30px;
+}
+.space3 {
+  height: 30px;
 }

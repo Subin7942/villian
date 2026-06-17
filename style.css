@@ -172,6 +172,7 @@ li::before {
 /* 아래 버튼 */
 .startBtn {
   width: 100%;
+  height: 50px;
 
   /* [핵심] 위의 내용물들이 flex-grow: 1로 밀려나도 
      이 margin-top: auto가 버튼을 맨 아래로 잡아줍니다 */
