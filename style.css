@@ -88,7 +88,7 @@ body {
   width: 400px;
   aspect-ratio: 400 / 872;
   padding: 40px;
-  background: white;
+  background: #f3f6ff;
   overflow: auto;
 
   display: flex;
