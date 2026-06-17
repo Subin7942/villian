@@ -1,3 +1,57 @@
+/* 1. 선택지 버튼 통합 설정 (이 하나로 모든 것이 해결됩니다) */
+.options button {
+  width: 100%;
+  padding: 20px 15px;
+  border-radius: 10px;
+  font-size: 17px;
+  letter-spacing: -3%;
+  line-height: 25px;
+  color: black;
+  background: #ffffff;
+
+  /* [핵심] 여기에 테두리를 넣으세요 */
+  border: 1px solid #1e64f8 !important;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+/* 2. 활성화 상태 */
+.options button.active {
+  background: #6486ff;
+  color: white;
+  border: 2px solid #6486ff !important;
+}
+/* 활성화(클릭) 되었을 때 */
+.options button.active {
+  background: #6486ff;
+  color: white;
+
+  /* 활성화 시에는 테두리 색도 배경과 맞추면 더 깔끔합니다 */
+  border: 1px solid #6486ff;
+}
+
+.buttonsTestPg button {
+  width: 70px;
+  height: 50px;
+  border-radius: 10px;
+}
+
+/* 뒤로 가기 버튼 */
+#backBtn {
+  background: #d2e0ff;
+}
+#backBtn:active {
+  background: #ffffff;
+}
+
+/* 다음 버튼 */
+#nextBtn {
+  background: #5e90fa;
+}
+#nextBtn:active {
+  background: #3c00ff;
+}
+
 /* 테스트 화면 진행 바 */
 .progress {
   display: flex;
@@ -12,22 +66,34 @@
   flex: 1;
   height: 3px;
   border-radius: 999px;
-  background: #ddd;
-
+  background: #cbdafe;
   display: flex;
   justify-content: center;
 }
 
 .step.active {
-  background: #333;
+  background: #7096f0;
 }
 
 /* 질문 번호 */
 .qNum {
+  color: #1e64f8;
   margin: 0;
   position: relative;
-  top: -20px;
-  font-size: 12px;
+  top: -15px;
+  font-size: 10px;
+}
+.question {
+  text-align: center;
+  min-height: 100px; /* 고정 높이 */
+  padding: 10px 15px;
+  box-sizing: border-box;
+}
+
+#questionText {
+  font-size: 24px; /* 질문 문장 크기 */
+  color: #0044cd;
+  margin: 0;
 }
 
 /* 선택지 목록 */
@@ -51,24 +117,17 @@
   font-size: 17px;
   letter-spacing: -3%;
   line-height: 25px;
-
   color: black;
-  background: #ddd;
+  background: #ffffff;
 }
+
+/* 활성화 상태 (active 클래스) */
 #opt1.active,
 #opt2.active,
 #opt3.active,
 #opt4.active {
-  width: 100%;
-  padding: 20px 15px;
-  border-radius: 10px;
-
-  font-size: 17px;
-  letter-spacing: -3%;
-  line-height: 25px;
-
-  color: rgb(255, 255, 255);
-  background: #333;
+  background: #256af8;
+  color: white;
 }
 
 /* 테스트 화면 하단 버튼 */
@@ -86,16 +145,55 @@
   border-radius: 10px;
 }
 
-/* 뒤로 가기 버튼 */
-#backBtn {
+#question {
+  /* [크기 및 디자인] */
+  font-size: 30px;
+  text-align: center;
+  padding: 0 15px; /* 좌우 여백을 조금 더 확보 */
+  color: #256af8;
+
+  /* [레이아웃] */
+  min-height: 100px; /* 최소 높이 확보 (버튼 안 밀리게) */
+  width: 100%; /* 가로 꽉 채우기 */
+  box-sizing: border-box; /* 패딩이 너비에 포함되게 */
+
+  /* [정렬: 위쪽 시작] */
+  display: block; /* flex 제거 (중앙 정렬 방지) */
+  padding-top: 10px; /* 위쪽 여백 */
+  padding-left: 15px; /* 좌우 여백 */
+  padding-right: 15px;
 }
-#backBtn:active {
-  background: #333;
+/* 화살표 버튼들의 기본 테두리 추가 */
+.buttonsTestPg button {
+  width: 70px;
+  height: 50px;
+  border-radius: 10px;
+
+  /* [추가] 여기서 테두리를 지정하세요 */
+  border: 1px solid #7096f0; /* 예시: 진행 바와 같은 파란색 계열 테두리 */
+  cursor: pointer;
 }
 
-/* 다음 버튼 */
-#nextBtn {
+/* 각각 다른 색을 원하신다면 이렇게 수정할 수 있습니다 */
+#backBtn {
+  background: #d2e0ff;
+  border: 1px solid #7096f0; /* 필요시 색상 변경 */
 }
-#nextBtn:active {
-  background: #333;
+
+#nextBtn {
+  background: #5e90fa;
+  border: 1px solid #5e90fa; /* 필요시 색상 변경 */
+}
+
+/* 하단 버튼 컨테이너 */
+.buttonsTestPg {
+  /* [핵심] 이 한 줄이 버튼을 무조건 맨 아래로 밀어냅니다 */
+  margin-top: auto;
+
+  /* 버튼 아래에 여백을 조금 주고 싶다면 */
+  padding-bottom: 20px;
+  box-sizing: border-box;
+}
+.question1 {
+  font-size: 30px;
 }

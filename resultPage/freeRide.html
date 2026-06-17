@@ -11,17 +11,18 @@
   <body>
     <div class="phone">
       <div class="resultPg">
+        <div class="up"></div>
         <!-- 이미지 -->
         <img class="resultImg" src="../asset/freeRide.png" alt="" />
 
         <!-- 유형이름 -->
-        <p id="typeName">무임승차형</p>
+        <p class="typeName">무임승차형</p>
 
         <!-- 유형 한 줄 요약 -->
-        <p id="sentence">실질적인 기여 없지만 성과는 함께</p>
+        <p class="sentence">실질적인 기여 없지만 성과는 함께</p>
 
         <!-- 유형 설명 -->
-        <p id="contents">
+        <p class="contents">
           회의에는 참여하지만 실제 결과물에 대한 기여도는 상대적으로 낮은
           유형입니다. 맡은 업무의 진행이 더디거나 역할 수행이 충분히 이루어지지
           않아, 부족한 부분을 다른 팀원이 보완하는 경우가 많습니다.
@@ -29,27 +30,34 @@
 
         <!-- 원인 설명 -->
         <p class="subheading">행동의 원인</p>
-        <div id="resultContainer">
-          <p>부담이 적은 역할만 맡고 핵심 업무를 피하려는 유형입니다.</p>
-          <p>부담이 적은 역할만 맡고 핵심 업무를 피하려는 유형입니다.</p>
-          <p>부담이 적은 역할만 맡고 핵심 업무를 피하려는 유형입니다.</p>
-          <p>부담이 적은 역할만 맡고 핵심 업무를 피하려는 유형입니다.</p>
+        <div class="resultContainer">
+          <p class="contents">
+            무임승차형은 일을 하지 않으려는 의도보다는 책임에 대한 부담과 실패에
+            대한 걱정이 큰 경우가 많습니다.
+          </p>
+          <p class="contents">
+            갈등을 피하고 안정적인 상황을 선호하는 성향 때문에 의견 제시나
+            의사결정을 다른 사람에게 맡기고 자신이 잘 해낼 수 있을지 확신이 서지
+            않을 때는 핵심 업무보다 비교적 부담이 적은 역할을 선택하는 모습을
+            보일 수 있습니다.
+          </p>
         </div>
 
         <!-- 매뉴얼 -->
         <p class="subheading">상황별 대처 매뉴얼</p>
         <div class="buttonsManual">
-          <button id="manual1">마감 직전에 대충 해온 일을 떠넘길 때</button>
-          <button id="manual2">
-            아무거나 괜찮다면서 결정과 책임을 피할 때
-          </button>
+          <button id="manual1">마감 직전에 대충 한 일을 떠넘길 때</button>
+          <button id="manual2">아무거나 괜찮다며 결정을 피할 때</button>
           <button id="manual3">항상 부담적은 역할만 할 때</button>
+          <button id="manual4">항상 부담적은 역할만 할 때</button>
+          <button id="manual4">항상 부담적은 역할만 할 때</button>
+          <button id="manual4">항상 부담적은 역할만 할 때</button>
         </div>
       </div>
 
       <!-- 하단 버튼들 -->
       <div class="buttonsResultPg">
-        <button id="shareBtn"></button>
+        <button id="shareBtn"><img src="../asset/share.png" alt="" /></button>
         <button id="restartBtn">다시하기</button>
       </div>
     </div>
@@ -72,8 +80,24 @@
       document.getElementById('manual3').addEventListener('click', function () {
         window.location.href = '../manualPage/freeRideManual_3.html';
       });
+      document
+        .getElementById('restartBtn')
+        .addEventListener('click', function () {
+          window.location.href = '../loading.html';
+        });
     }
 
     loadResult();
+
+    document.getElementById('shareBtn').addEventListener('click', () => {
+      navigator.clipboard
+        .writeText(window.location.href)
+        .then(() => {
+          alert('링크가 복사되었습니다!');
+        })
+        .catch((err) => {
+          console.error(err);
+        });
+    });
   </script>
 </html>

@@ -1,46 +1,48 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style.css" />
     <link rel="stylesheet" href="../manual.css" />
     <title>Document</title>
-  </head>
-  <body>
+</head>
+<body>
     <div class="phone">
-      <div class="manualPg">
-        <p class="">빌런상황:</p>
-        <h1 class="manualName">항상 부담적은 역할만 할 때</h1>
+        <div class="manualPg">
+            <p class="subheading">빌런상황:</p>
+            <h1 class="manualName">항상 부담적은 역할만 할 때</h1>
 
-        <!-- 본문 넣는 컨테이너 -->
-        <div class="manualContainer"></div>
-        <p>
-          무임승차형은 악의적으로 일을 회피하려는 의도보다는 비교적 쉽고 부담이
-          적은 역할만 맡으려는 경향이 있습니다.
-        </p>
-        <p>
-          따라서 역할을 단순히 희망 여부만으로 정하기보다 업무의 난이도와 분량을
-          고려해 균형 있게 배분하는 것이 중요합니다.
-        </p>
-        <p>
-          부담이 큰 역할도 작은 단위로 나누어 참여할 수 있도록 조정하면 보다
-          적극적으로 참여시킬 수 있습니다.
-        </p>
+            <!-- 본문 넣는 컨테이너 -->
+            <div class="manualContainer">
 
-        <p class="">핵심대응</p>
-        <div class="actionContainer">
-          <div class="action"></div>
-          <div class="action"></div>
-          <div class="action"></div>
-        </div>
+                <p>무임승차형은 악의적으로 일을 회피하려는 의도보다는 비교적 쉽고 부담이 적은 역할만 맡으려는 경향이 있습니다. </p>
+        <p>따라서 역할을 단순히 희망 여부만으로 정하기보다 업무의 난이도와 분량을 고려해 균형 있게 배분하는 것이 중요합니다.</p>
+        <p>부담이 큰 역할도 작은 단위로 나누어 참여할 수 있도록 조정하면 보다 적극적으로 참여시킬 수 있습니다.</p>
+            </div>
 
-        <div class="example">
-          <p>
-            회의 기록은 쉬운 일이니까 다 끝나면 발표 자료 초안도 같이 담당해줘.
-          </p>
-        </div>
+            <p class="subheading2">핵심대응</p>
+            <div class="actionContainer">
+                <ol class="action">
+                    <li>역할은 하고 싶은 일보다 분량과 난이도를 고려해 배분하기</li>
+                    <p>특정 팀원에게 중요한 업무가 집중되는 것을 예방할 수 있다.</p>
+                    <li>부담이 큰 작업은 세부 업무로 나누어 단계적으로 참여할 수 있도록 하기</li>
+                    <p>익숙하지 않은 역할에 대한 부담을 줄이고 참여를 높일 수 있다.</p>
+                    <li>쉬운 역할을 맡았다면 추가로 책임질 결과물을 함께 정하기</li>
+                    <p>어려운 역할을 맡은 사람에 대해 불만을 줄일 수 있다</p>
+                </ol>
+            </div>
+
+          <div class="buttonsManualPg">
+        <button id="backBtn"><img src="../asset/back.png" alt="이전"></button>
+
       </div>
     </div>
-  </body>
+</body>
+<script>
+          document.getElementById('backBtn').addEventListener('click', function () {
+        window.location.href = '../resultPage/freeRide.html';
+      });
+</script>
+
 </html>

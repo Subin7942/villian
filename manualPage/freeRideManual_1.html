@@ -1,52 +1,54 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style.css" />
     <link rel="stylesheet" href="../manual.css" />
     <title>Document</title>
-  </head>
-  <body>
+</head>
+<body>
     <div class="phone">
-      <div class="manualPg">
-        <p class="">빌런상황:</p>
-        <h1 class="manualName">마감 직전에 대충 해온 일을 떠넘길 때</h1>
+        <div>
 
-        <!-- 본문 넣는 컨테이너 -->
-        <div class="manualContainer"></div>
-        <p>
-          마감 직전에 대충 해온 일을 넘기면, 급한 마음에 다른 팀원이 대신
-          마무리하게 되기 쉽습니다.
-        </p>
-        <p>
-          하지만 한 번 대신 떠안기 시작하면, 이 유형은 다음에도 비슷한 방식으로
-          책임을 흐릴 수 있습니다.
-        </p>
-        <p>
-          따라서 마감이 급하더라도 역할 자체를 대신 가져오지 않는 것이 아닌,
-          부족한 부분을 구체적으로 짚고 다시 수정해야 할 범위를 분명히 정해줘야
-          합니다.
-        </p>
-        <p>
-          또한 필요하다면 형식이나 방향은 도와줄 수 있지만, 맡은 파트의 최종
-          수정은 본인이 끝내도록 만드는 것이 중요합니다.
-        </p>
-
-        <p class="">핵심대응</p>
-        <div class="actionContainer">
-          <div class="action"></div>
-          <div class="action"></div>
-          <div class="action"></div>
         </div>
+        <div class="manualPg">
+            <p class="subheading">빌런상황:</p>
+            <h1 class="manualName">마감 직전에 대충 한 일을 떠넘길 때</h1>
 
-        <div class="example">
-          <p>
-            이 파트를 바로 넣기에는 부적한 부분들이 있는 것 같아. 수정할 부분
-            체크해뒀으니깐 네가 오늘 밤 10시까지 다시 보완해줘.
-          </p>
-        </div>
+            <!-- 본문 넣는 컨테이너 -->
+            <div class="manualContainer">
+                <p>마감 직전에 대충 해온 일을 넘기면 급한 마음에 다른 팀원이 대신 마무리하게 되기 쉽습니다. </p>
+        <p>하지만 한 번 대신 떠안기 시작하면 이 유형은 다음에도 비슷한 방식으로 책임을 흐릴 수 있습니다.</p>
+        <p>따라서 마감이 급하더라도 역할 자체를 대신 가져오지 않는 것이 아닌 부족한 부분을 구체적으로 짚고 다시 수정해야 할 범위를 분명히 정해줘야 합니다.</p>
+        <p>또한 필요하다면 형식이나 방향은 도와줄 수 있지만 맡은 파트의 최종 수정은 본인이 끝내도록 만드는 것이 중요합니다.</p>
+            </div>
+
+            <p class="subheading2">핵심대응</p>
+            <div class="actionContainer">
+                <ol class="action">
+                    <li>해온 결과물이 기준에 맞는지 먼저 확인하기</li>
+                    <p>분량, 형식, 핵심 내용이 부족하면 다시 수정하게 해, 다른 팀원이 그대로 떠안지 않게 해야 함.</p>
+                    <li>부족한 부분 체크 후  다시 수정 부탁하기</li>
+                    <p>부족한 결과물을 그대로 넘기지 않도록, 보완 부분과 마감 시간을 분명히 정해서 다시 공유하게 해야 함.</p>
+                    <li>일단 함께 수습하되 마무리 부분 다시 나누기</li>
+                    <p>마감 떄문에 팀이 일부 도와주더라도, 최종 보안은 원래 담당자가 하도록 해야 함.</p>
+                </ol>
+            </div>
+
+<div class="buttonsManualPg">
+        <button id="backBtn"><img src="../asset/back.png" alt="이전"></button>
+
       </div>
+
     </div>
-  </body>
+</body>
+
+
+<script>
+          document.getElementById('backBtn').addEventListener('click', function () {
+        window.location.href = '../resultPage/freeRide.html';
+      });
+</script>
+
 </html>

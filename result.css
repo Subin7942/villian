@@ -1,7 +1,31 @@
+.typeName,
+.sentence,
+.contents,
+.subheading {
+  margin: 0;
+}
+
 .resultPg {
   width: 100%;
   height: 80%;
   align-self: flex-start;
+}
+
+.up {
+  position: fixed;
+
+  width: 400px;
+  height: 40px;
+  left: 50%;
+
+  padding-inline: 40px;
+
+  top: calc(50% - 450px);
+
+  transform: translateX(-50%);
+
+  background: linear-gradient(to bottom, #f3f6ff 70%, rgba(255, 255, 255, 0));
+  z-index: 1000;
 }
 
 .resultImg {
@@ -10,42 +34,102 @@
   border-radius: 10px;
 }
 
+.typeName {
+  font-weight: 700;
+  font-size: 15px;
+  text-align: left;
+  letter-spacing: -5%;
+  line-height: 15px;
+  color: #5581de;
+
+  margin-top: 25px;
+  margin-bottom: 3px;
+}
+
+.sentence {
+  font-weight: 800;
+  font-size: 22px;
+  text-align: left;
+  letter-spacing: -5%;
+  line-height: 40px;
+  color: #0044cd;
+
+  margin-bottom: 20px;
+}
+
+.contents {
+  font-weight: 500;
+  font-size: 17px;
+  text-align: left;
+  letter-spacing: -5%;
+  line-height: 27px;
+  color: #0b2a74;
+
+  margin-bottom: 12px;
+}
+
+.subheading {
+  font-weight: 700;
+  font-size: 17px;
+  text-align: left;
+  letter-spacing: -5%;
+  line-height: 27px;
+  color: #5581de;
+
+  margin-top: 24px;
+  margin-bottom: 12px;
+}
+
 .buttonsResultPg {
   position: fixed;
 
   width: 400px;
-  height: 50px;
+  height: 120px;
 
-  padding: 40px;
-  top: calc(50% + 390px);
+  padding-inline: 40px;
+
+  top: calc(50% + 320px);
 
   transform: translateX(-50%, -50%);
 
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 
-  background: linear-gradient(to top, white 70%, rgba(255, 255, 255, 0));
+  background: linear-gradient(to top, #f3f6ff 70%, rgba(255, 255, 255, 0));
   z-index: 1000;
 }
 
 .buttonsResultPg button {
   height: 50px;
   border-radius: 10px;
+  background-color: #f3f6ff;
 }
 
 #shareBtn {
   aspect-ratio: 60 / 50;
+  border: 1px solid #5e90fa;
+  background-color: none;
+}
+#shareBtn img {
+  width: 25px;
+  height: 25px;
 }
 
 #restartBtn {
   aspect-ratio: 250 / 50;
+  background-color: #5e90fa;
+  color: white;
+  border: none;
+  font-size: 15px;
+  font-weight: 500;
 }
 
 .buttonsManual {
   display: flex;
   flex-direction: column;
-  gap: 3px;
+  gap: 10px;
 }
 
 #manual1,
@@ -54,4 +138,17 @@
   width: 100%;
   height: 56px;
   border-radius: 10px;
+  border: 1px solid #0044cd;
+  background-color: white;
+  padding-inline: 22px;
+
+  font-weight: 700;
+  font-size: 15px;
+  text-align: left;
+  letter-spacing: -5%;
+  line-height: 27px;
+  color: #0044cd;
+}
+#manual4 {
+  visibility: hidden;
 }

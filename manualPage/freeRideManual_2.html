@@ -10,43 +10,62 @@
   <body>
     <div class="phone">
       <div class="manualPg">
-        <p class="">빌런상황:</p>
-        <h1 class="manualName">아무거나 괜찮다면서 결정과 책임을 피할 때</h1>
+        <p class="subheading">빌런상황:</p>
+        <h1 class="manualName">아무거나 괜찮다며 결정을 피할 때</h1>
 
         <!-- 본문 넣는 컨테이너 -->
-        <div class="manualContainer"></div>
-        <p>
-          팀원들의 말을 따른다는 말은 겉으로는 협조적으로 보이지만 다른 사람에게
-          책임을 돌리는 방식으로 변질될 수 있습니다.
-        </p>
-        <p>
-          이럴 때는 각자가 자신이 하고 싶은 것을 구체적으로 말하도록 팀 분위기를
-          잡아야 합니다.
-        </p>
-        <p>
-          단순히 의견만 묻는 것이 아니라 선택한 안에 따라 맡을 역할을 확실하게
-          분담하는 것이 중요합니다.
-        </p>
-        <p>
-          이것이 책임이 흐려지지 않고 팀 안에서 실제 기여로 이어지게 하는 발판이
-          됩니다.
-        </p>
-
-        <p class="">핵심대응</p>
-        <div class="actionContainer">
-          <div class="action"></div>
-          <div class="action"></div>
-          <div class="action"></div>
+        <div class="manualContainer">
+          <p>
+            팀원들의 말을 따른다는 말은 겉으로는 협조적으로 보이지만 다른
+            사람에게 책임을 돌리는 방식으로 변질될 수 있습니다.
+          </p>
+          <p>
+            이럴 때는 각자가 자신이 하고 싶은 것을 구체적으로 말하도록 팀
+            분위기를 잡아야 합니다.
+          </p>
+          <p>
+            단순히 의견만 묻는 것이 아니라 선택한 안에 따라 맡을 역할을 확실하게
+            분담하는 것이 중요합니다.
+          </p>
+          <p>
+            이것이 책임이 흐려지지 않고 팀 안에서 실제 기여로 이어지게 하는
+            발판이 됩니다.
+          </p>
         </div>
 
-        <div class="example">
-          <p>
-            아무거나 다 괜찮다고 하면 정하기가 어려우니까, 각자가 해와야 하는
-            것을 정리해서 말해보자 그리고 자신이 이 역할을 맡고 싶은 이유를 설명
-            부탁해.
-          </p>
+        <p class="subheading2">핵심대응</p>
+        <div class="actionContainer">
+          <ol class="action">
+            <li>역할을 구체적으로 지정하기</li>
+            <p>
+              갈등을 피하려고 결정을 미루는 경우가 있어, 명확한 역할이 있으면
+              참여하기 쉬워진다
+            </p>
+            <li>의견을 직접 물어보기</li>
+            <p>
+              의견 충돌을 부담스러워해 먼저 말하지 않는 경우가 많아, 질문을
+              받으면 참여 가능성이 높아진다.
+            </p>
+            <li>맡은 역할의 결과를 확인하기</li>
+            <p>
+              관계를 중요하게 여기므로 책임이 명확해지면 맡은 역할을 끝까지
+              수행하려는 경향이 있다.
+            </p>
+          </ol>
+        </div>
+
+        <div class="buttonsManualPg">
+          <button id="backBtn">
+            <img src="../asset/back.png" alt="이전" />
+          </button>
         </div>
       </div>
     </div>
   </body>
+
+  <script>
+    document.getElementById('backBtn').addEventListener('click', function () {
+      window.location.href = '../resultPage/freeRide.html';
+    });
+  </script>
 </html>
