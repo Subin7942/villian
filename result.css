@@ -1,7 +1,7 @@
-.typeName,
-.sentence,
 .contents,
-.subheading {
+.subheading,
+.sentence,
+.typeName {
   margin: 0;
 }
 
@@ -9,6 +9,13 @@
   width: 100%;
   height: 80%;
   align-self: flex-start;
+}
+.resultPg {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-bottom: 140px; /* 하단 버튼 공간 */
+  transform: translateY(-70px);
 }
 
 .up {
@@ -51,7 +58,7 @@
   font-size: 22px;
   text-align: left;
   letter-spacing: -5%;
-  line-height: 40px;
+  line-height: 22px;
   color: #0044cd;
 
   margin-bottom: 20px;
@@ -73,11 +80,11 @@
   font-size: 17px;
   text-align: left;
   letter-spacing: -5%;
-  line-height: 27px;
+  line-height: 17px;
   color: #5581de;
 
   margin-top: 24px;
-  margin-bottom: 12px;
+  margin-bottom: 1px;
 }
 
 .buttonsResultPg {
@@ -111,6 +118,14 @@
   aspect-ratio: 60 / 50;
   border: 1px solid #5e90fa;
   background-color: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#shareBtn:active {
+  aspect-ratio: 60 / 50;
+  border: 1px solid #5e90fa;
+  background-color: #d2e0ff;
 }
 #shareBtn img {
   width: 25px;
@@ -120,6 +135,14 @@
 #restartBtn {
   aspect-ratio: 250 / 50;
   background-color: #5e90fa;
+  color: white;
+  border: none;
+  font-size: 15px;
+  font-weight: 500;
+}
+#restartBtn:active {
+  aspect-ratio: 250 / 50;
+  background-color: #256af8;
   color: white;
   border: none;
   font-size: 15px;
@@ -151,4 +174,8 @@
 }
 #manual4 {
   visibility: hidden;
+}
+
+.space {
+  height: 5px;
 }

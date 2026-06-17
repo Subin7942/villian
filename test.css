@@ -6,7 +6,7 @@
   font-size: 17px;
   letter-spacing: -3%;
   line-height: 25px;
-  color: black;
+  color: 0b2a74;
   background: #ffffff;
 
   /* [핵심] 여기에 테두리를 넣으세요 */
@@ -19,7 +19,7 @@
 .options button.active {
   background: #6486ff;
   color: white;
-  border: 2px solid #6486ff !important;
+  border: 1px solid #6486ff !important;
 }
 /* 활성화(클릭) 되었을 때 */
 .options button.active {
@@ -59,6 +59,7 @@
   gap: 5px;
   width: 100%;
   height: 90px;
+  margin-top: +10px;
 }
 
 /* 진행 바의 각 칸 설정 */
@@ -84,6 +85,7 @@
   font-size: 10px;
 }
 .question {
+  justify-content: flex-start;
   text-align: center;
   min-height: 100px; /* 고정 높이 */
   padding: 10px 15px;
@@ -103,6 +105,7 @@
   gap: 10px;
   width: 100%;
   align-items: center;
+  margin-top: -10px;
 }
 
 /* 각 선택지 버튼 별 설정 */
@@ -117,7 +120,7 @@
   font-size: 17px;
   letter-spacing: -3%;
   line-height: 25px;
-  color: black;
+  color: #0b2a74;
   background: #ffffff;
 }
 
@@ -148,10 +151,10 @@
 
 #question {
   /* [크기 및 디자인] */
-  font-size: 30px;
+  font-size: 25px;
   text-align: center;
   padding: 0 15px; /* 좌우 여백을 조금 더 확보 */
-  color: #256af8;
+  color: #0044cd;
 
   /* [레이아웃] */
   min-height: 100px; /* 최소 높이 확보 (버튼 안 밀리게) */
@@ -163,6 +166,8 @@
   padding-top: 10px; /* 위쪽 여백 */
   padding-left: 15px; /* 좌우 여백 */
   padding-right: 15px;
+
+  margin-top: -30px;
 }
 /* 화살표 버튼들의 기본 테두리 추가 */
 .buttonsTestPg button {
@@ -180,10 +185,18 @@
   background: #d2e0ff;
   border: 1px solid #7096f0; /* 필요시 색상 변경 */
 }
+#backBtn:active {
+  background: rgb(189, 207, 255);
+  border: 1px solid #7096f0; /* 필요시 색상 변경 */
+}
 
 #nextBtn {
   background: #5e90fa;
   border: 1px solid #5e90fa; /* 필요시 색상 변경 */
+}
+#nextBtn:active {
+  background: #256af8;
+  border: 1px solid #256af8; /* 필요시 색상 변경 */
 }
 
 /* 하단 버튼 컨테이너 */

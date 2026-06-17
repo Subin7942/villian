@@ -22,7 +22,7 @@
   padding-inline: 40px;
 
   top: calc(50% - 450px);
- 
+
   transform: translateX(-50%);
 
   background: linear-gradient(
@@ -41,11 +41,11 @@
   font-size: 17px;
   text-align: left;
   letter-spacing: -5%;
-  line-height: 40px;
+  line-height: 17px;
   color: #5581de;
 
   margin-top: 10px;
-  margin-bottom: 3px;
+  margin-bottom: 7px;
 }
 
 .manualName {
@@ -102,7 +102,7 @@
   font-size: 15px;
   font-weight: 500;
   padding-left: 20px;
-  line-height: 20px;
+  line-height: 23px;
 
   margin-top: 0;
   margin-bottom: 15px;
@@ -115,7 +115,7 @@
   text-align: left;
   letter-spacing: -5%;
   line-height: 27px;
-  color: #0b2a74;
+  color: #0044cd;
 
   margin-top: 24px;
   margin-bottom: 12px;
