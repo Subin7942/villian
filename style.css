@@ -83,7 +83,8 @@ body {
   align-items: center;
   min-height: 100vh;
 }
-
+/* justify-content: center; 추가해서 
+  */
 .phone {
   width: 400px;
   aspect-ratio: 400 / 872;
@@ -95,6 +96,9 @@ body {
   flex-direction: column;
   align-items: center;
 
+  justify-content: center;
+  /* [추가] 요소들끼리 적당한 간격을 줍니다 */
+  gap: 20px;
   position: relative;
 
   font-family: 'Pretendard', sans-serif;
@@ -115,14 +119,15 @@ h1 {
   text-align: left;
   letter-spacing: -5%;
   line-height: 40px;
+  color: #0044cd;
 }
 
 h2 {
-  font-weight: 800;
   font-size: 25px;
   text-align: center;
   letter-spacing: -5%;
   line-height: 35px;
+  color: #0b2a74;
 }
 
 /* 시작 화면 글자 배치 부분 */
@@ -132,18 +137,60 @@ h2 {
 }
 
 ul {
-  list-style: none;
+  text-align: left; /* [핵심] 내부 텍스트를 왼쪽으로 */
+  padding: 0; /* 기본 패딩 제거 */
 }
 
+/* 2. li의 정렬을 확실하게 잡음 */
+li {
+  display: block; /* 블록 요소로 만들어 왼쪽부터 차곡차곡 배치 */
+  width: 100%;
+  text-align: left; /* 확실한 왼쪽 정렬 */
+
+  line-height: 1.4; /* 기본값보다 낮추면 글자끼리 가까워짐 (1.2 ~ 1.4 추천) */
+  margin-bottom: 5px; /* [수정] 항목들 사이의 간격을 더 줄임 */
+}
 li::before {
   content: '•';
   color: #333;
   font-size: 20px;
   margin-right: 8px;
+  display: inline-block; /* 위치 잡기 용이하게 변경 */
 }
 
-/* 시작 버튼 */
+/* 중간 영역(질문이나 시작글)이 남는 공간을 다 차지하게 함 */
+.startPg,
+.question {
+  flex-grow: 1; /* 이 부분이 위쪽 컨텐츠들을 고정시켜줍니다 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* 내용물은 박스 안에서 중앙 정렬 */
+  width: 100%;
+}
+
+/* 아래 버튼 */
 .startBtn {
+  width: 100%;
+
+  /* [핵심] 위의 내용물들이 flex-grow: 1로 밀려나도 
+     이 margin-top: auto가 버튼을 맨 아래로 잡아줍니다 */
+  margin-top: auto;
+
+  border-radius: 10px;
+  padding: 15px;
+  /* [핵심] 상단 여백을 자동으로 채워 버튼을 아래로 밀어냅니다 */
+  margin-top: 100px;
+
+  border-radius: 10px;
+  padding: 15px;
+  font-size: 15px;
+  font-weight: 600;
+
+  /* 색상 추가 (안 하셨다면 추가하세요) */
+  background: #5e90fa;
+  color: white;
+  border: none;
+  cursor: pointer;
   width: 100%;
   bottom: 20px;
 
@@ -152,7 +199,19 @@ li::before {
 
   font-size: 15px;
   font-weight: 600;
+  color: #ffffff; /* 글자색을 흰색으로 */
+  background: #5e90fa; /* 배경색 */
 }
-.startBtn:active {
-  background: #333;
+
+/* h1과 h3 사이의 간격을 좁히는 핵심 설정 */
+.startPg h1 {
+  margin-bottom: 0px; /* 제목 아래 여백 제거 */
+  line-height: 1.2; /* 줄 간격도 조금 좁게 */
+}
+
+.startPg h3 {
+  margin-top: 10px; /* h1과 h3 사이의 간격 (원하는 만큼 줄이세요: 5px, 0px 등) */
+  margin-bottom: 20px; /* h3 아래 리스트와의 간격은 유지 */
+  font-weight: 500; /* h3은 보통 h1보다 얇게 설정 */
+  color: #555; /* 색상도 h1보다 흐리게 하면 더 예쁩니다 */
 }
